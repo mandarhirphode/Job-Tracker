@@ -3,24 +3,24 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
-  color: #e2e8f0;
-  background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: #fefce8;
+  background: #000000;
   min-height: 100vh;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --accent: #f59e0b;
-  --accent-hover: #fbbf24;
-  --surface: rgba(30, 41, 59, 0.8);
-  --surface-hover: rgba(51, 65, 85, 0.9);
-  --border: rgba(71, 85, 105, 0.5);
-  --text-muted: #94a3b8;
+  --accent: #fbbf24;         /* bright yellow */
+  --accent-hover: #f59e0b;   /* deeper yellow-orange */
+  --surface: rgba(15, 23, 42, 0.9);       /* near-black surfaces */
+  --surface-hover: rgba(17, 24, 39, 0.95);
+  --border: rgba(148, 163, 184, 0.35);
+  --text-muted: #9ca3af;
   --danger: #ef4444;
   --success: #22c55e;
   --radius: 12px;
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
 * {
