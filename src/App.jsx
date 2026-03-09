@@ -24,14 +24,22 @@ function generateId() {
   return Math.random().toString(36).slice(2) + Date.now().toString(36)
 }
 
+function formatLocalDate(date) {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
 function todayStr() {
-  return new Date().toISOString().slice(0, 10)
+  return formatLocalDate(new Date())
 }
 
 function addDays(dateStr, days) {
-  const d = new Date(dateStr)
+  const [year, month, day] = dateStr.split('-').map(Number)
+  const d = new Date(year, month - 1, day)
   d.setDate(d.getDate() + days)
-  return d.toISOString().slice(0, 10)
+  return formatLocalDate(d)
 }
 
 /** Returns { href, type: 'email'|'linkedin'|'phone' } or null if not a valid contact */
